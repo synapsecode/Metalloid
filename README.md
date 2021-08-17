@@ -1,14 +1,16 @@
-# Metalloid
-(FULL VIDEO DEMO): https://drive.google.com/file/d/1ZpnlcQSL0UCFVu60vjhGbBpcJQgYOiFJ/view?usp=sharing
+# metalloid
 
-Metalloid is an OpenSource Community for Metalheads. It is currently a UI-Only Project built to demonstrate my Flutter UI Skills. Infact, this project is actually 2 years old! I can make some really nice Flutter apps given enough time and creative freedom! This project was initially inspired by MetalAmino but has since outdone it in every possible way. Speaking with respect to UI Only!
+A new Flutter project.
 
-## Features(UI-Only)
-1. A Home Feed that displays Bands
-2. A List of genres
-3. Direct Messages and Community Chatrooms
-4. Quizzes
-5. Polls and a lot more!
+## Getting Started
 
-## Future
-This project is currently archived. However when i find time I will definitely add a backend to this and possibly ship it to the play store! The metalhead community is really passionate about the topic and would love such an application! I personally listen to metal bands too! This is my way of contributing back to the community. If you want to collaborate, hit me up!
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
