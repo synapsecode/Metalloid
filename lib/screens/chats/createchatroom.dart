@@ -7,8 +7,8 @@ class PublicChatRoomProvider extends StatefulWidget {
 
 class _PublicChatRoomProviderState extends State<PublicChatRoomProvider>
     with SingleTickerProviderStateMixin {
-  ScrollController scrollcontroller;
-  TabController controller;
+  late ScrollController scrollcontroller;
+  late TabController controller;
 
   @override
   void initState() {
@@ -27,8 +27,7 @@ class _PublicChatRoomProviderState extends State<PublicChatRoomProvider>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black38,
-      resizeToAvoidBottomPadding: false,
+        backgroundColor: Colors.black38,
         body: NestedScrollView(
           controller: scrollcontroller,
           headerSliverBuilder: (BuildContext context, bool boxIsScrolled) {

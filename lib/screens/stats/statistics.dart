@@ -105,43 +105,43 @@ class TopBar extends StatelessWidget {
         padding:
             EdgeInsets.only(left: 10.0, bottom: 5.0, top: 10.0, right: 10.0),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(10.0),
             child: Container(
-          color: Colors.black54,
-          padding: EdgeInsets.all(12.0),
-          child: Column(
-            children: <Widget>[
-              Row(
+              color: Colors.black54,
+              padding: EdgeInsets.all(12.0),
+              child: Column(
                 children: <Widget>[
-                  Icon(Icons.flash_on, color: Colors.yellow),
-                  SizedBox(width: 10.0),
-                  Text("What's Happening Now!")
+                  Row(
+                    children: <Widget>[
+                      Icon(Icons.flash_on, color: Colors.yellow),
+                      SizedBox(width: 10.0),
+                      Text("What's Happening Now!")
+                    ],
+                  ),
+                  Divider(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Row(children: <Widget>[
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        CircleAvatar(
+                          backgroundColor: Colors.lightGreenAccent,
+                          radius: 4.0,
+                        ),
+                        SizedBox(width: 10.0),
+                        Text("Members Online (2374)")
+                      ]),
+                      Text("See All", style: TextStyle(color: Colors.white54))
+                    ],
+                  ),
+                  Padding(
+                      padding: EdgeInsets.symmetric(vertical: 15.0),
+                      child: ProfileIconScroller(24.0))
                 ],
               ),
-              Divider(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Row(children: <Widget>[
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    CircleAvatar(
-                      backgroundColor: Colors.lightGreenAccent,
-                      radius: 4.0,
-                    ),
-                    SizedBox(width: 10.0),
-                    Text("Members Online (2374)")
-                  ]),
-                  Text("See All", style: TextStyle(color: Colors.white54))
-                ],
-              ),
-              Padding(
-                  padding: EdgeInsets.symmetric(vertical: 15.0),
-                  child: ProfileIconScroller(24.0))
-            ],
-          ),
-        )));
+            )));
   }
 }
 
@@ -150,7 +150,11 @@ class IndividualStatObject extends StatelessWidget {
   final String task;
   final IconData icon;
   final color;
-  IndividualStatObject({this.members, this.icon, this.task, this.color});
+  IndividualStatObject(
+      {required this.members,
+      required this.icon,
+      required this.task,
+      required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -179,7 +183,7 @@ class IndividualStatObject extends StatelessWidget {
 class InfoDisplay extends StatelessWidget {
   final String task;
   final IconData icon;
-  InfoDisplay({this.icon, this.task});
+  InfoDisplay({required this.icon, required this.task});
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -266,7 +270,7 @@ class ProfileIconScroller extends StatelessWidget {
 
 class NumberViewBox extends StatelessWidget {
   final int members;
-  NumberViewBox({this.members});
+  NumberViewBox({required this.members});
   @override
   Widget build(BuildContext context) {
     return ClipRRect(

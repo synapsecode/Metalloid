@@ -3,9 +3,9 @@
 class Author {
   final String imageUrl;
   final String name;
-  Author({this.name, this.imageUrl});
+  Author({required this.name, required this.imageUrl});
 
-  void addAuthor({String name, String imageUrl}) {
+  void addAuthor({required String name, required String imageUrl}) {
     authors.add(Author(name: name, imageUrl: imageUrl));
   }
 }
@@ -31,22 +31,23 @@ class PollItem {
   final int validity;
 
   PollItem(
-      {this.author,
-      this.pollName,
-      this.desc,
-      this.options,
-      this.time,
-      this.votes,
-      this.validity});
+      {required this.author,
+      required this.pollName,
+      required this.desc,
+      required this.options,
+      required this.time,
+      required this.votes,
+      required this.validity});
 
-  void addPollItem(
-      {Author author,
-      String pollName,
-      String desc,
-      List<String> options,
-      int time,
-      int votes,
-      int validity}) {}
+  void addPollItem({
+    required Author author,
+    required String pollName,
+    required String desc,
+    required List<String> options,
+    required int time,
+    required int votes,
+    required int validity,
+  }) {}
 }
 
 List<PollItem> polls = [
@@ -63,7 +64,7 @@ List<PollItem> polls = [
       author: getAuthors()[2],
       pollName: "Who has the best Stage Performance?",
       desc:
-          "There are a lot of bands who know how to hype up the Crowd . I believe Slipknot are the masters of this! What say?",
+          "There are a lot of bands who know how to hype up the Crowd . I believe Slipknot are the masters of required this! What say?",
       options: [
         'Slipknot',
         'Metallica',

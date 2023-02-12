@@ -25,7 +25,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
-  TabController _controller;
+  late TabController _controller;
 
   @override
   void initState() {
@@ -76,8 +76,7 @@ class _MyHomePageState extends State<MyHomePage>
               title: const Text('Some more information'),
             ),
           ),
-          new RaisedButton(
-            color: Theme.of(context).primaryColor,
+          new ElevatedButton(
             onPressed: () {},
             child: const Text(
               'Search for POIs',
@@ -89,6 +88,3 @@ class _MyHomePageState extends State<MyHomePage>
     );
   }
 }
-
-
-

@@ -16,7 +16,7 @@ class ActionButton extends StatelessWidget {
           backgroundColor: Colors.red,
           foregroundColor: Colors.white,
           child: Icon(icon),
-          onPressed: event,
+          onPressed: () => event(),
         ),
         Padding(padding: EdgeInsets.only(bottom: 10.0)),
         Text(actionText)

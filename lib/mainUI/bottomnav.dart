@@ -16,21 +16,21 @@ class BNavC extends State<BottomNavigator> {
     });
   }
 
-  void _tapAction(int index){
-    switch(index){
+  void _tapAction(int index) {
+    switch (index) {
       case 0:
         Scaffold.of(context).openDrawer();
         break;
       case 1:
-      Navigator.of(context).pushNamed('/Statistics');
-      break;
+        Navigator.of(context).pushNamed('/Statistics');
+        break;
       case 2:
         Navigator.of(context).pushNamed('/Chats');
         break;
       case 3:
         Navigator.of(context).pushNamed('/Profile');
         break;
-    } 
+    }
   }
 
   @override
@@ -38,12 +38,12 @@ class BNavC extends State<BottomNavigator> {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       items: <BottomNavigationBarItem>[
-        BottomNavigationBarItem(icon: Icon(Icons.menu), title: Text('Menu')),
+        BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
         BottomNavigationBarItem(
-            icon: Icon(Icons.equalizer), title: Text('Statistics')),
-        BottomNavigationBarItem(icon: Icon(Icons.chat), title: Text('Chats')),
+            icon: Icon(Icons.equalizer), label: 'Statistics'),
+        BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chats'),
         BottomNavigationBarItem(
-            icon: Icon(Icons.perm_identity), title: Text('Profile')),
+            icon: Icon(Icons.perm_identity), label: 'Profile'),
       ],
       selectedItemColor: Colors.white,
       backgroundColor: Theme.of(context).primaryColor,

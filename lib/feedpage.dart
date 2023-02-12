@@ -36,7 +36,7 @@ class ImageCard extends StatelessWidget {
   final String text;
   final String imageUrl;
   final Author author;
-  ImageCard({this.text, this.author, this.imageUrl});
+  ImageCard({required this.text, required this.author, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -134,7 +134,7 @@ class ActionBar extends StatelessWidget {
 //           child: Row(
 //             children: <Widget>[
 //               Expanded(
-//                   child: RaisedButton(
+//                   child: ElevatedButton(
 //                 color: Colors.red,
 //                 onPressed: () {
 //                   setState(() {

@@ -103,7 +103,8 @@ class PollHeader extends StatelessWidget {
   final String authorName;
   final int time;
 
-  PollHeader({this.authorName, this.imageUrl, this.time});
+  PollHeader(
+      {required this.authorName, required this.imageUrl, required this.time});
 
   @override
   Widget build(BuildContext context) {
@@ -153,7 +154,7 @@ class PollHeader extends StatelessWidget {
 class PollDescription extends StatelessWidget {
   final String pollName;
   final String pollDesc;
-  PollDescription({this.pollName, this.pollDesc});
+  PollDescription({required this.pollName, required this.pollDesc});
 
   @override
   Widget build(BuildContext context) {
@@ -182,7 +183,7 @@ class PollingOptions extends StatelessWidget {
   final List<String> options;
   final String pollName;
 
-  PollingOptions({this.pollName, this.options});
+  PollingOptions({required this.pollName, required this.options});
 
   @override
   Widget build(BuildContext context) {
@@ -192,7 +193,7 @@ class PollingOptions extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 5.0),
                 child: Row(children: <Widget>[
                   Expanded(
-                      child: RaisedButton(
+                      child: ElevatedButton(
                     onPressed: () =>
                         print("Clicked on option ($x) in Poll '$pollName'"),
                     child: Text(x),
@@ -206,7 +207,7 @@ class PollInfo extends StatelessWidget {
   final int votes;
   final int validity;
 
-  PollInfo({this.votes, this.validity});
+  PollInfo({required this.votes, required this.validity});
 
   @override
   Widget build(BuildContext context) {

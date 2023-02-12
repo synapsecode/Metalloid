@@ -45,8 +45,8 @@ class MyTabs extends StatefulWidget {
 }
 
 class MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin {
-  TabController controller;
-  ScrollController scrollcontroller;
+  late TabController controller;
+  late ScrollController scrollcontroller;
 
   //BOILERPLATE: Widget LifeCycle: Initiates a Widget's State.
   @override
@@ -69,7 +69,6 @@ class MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin {
     return new Scaffold(
         //Scaffold Properties
         backgroundColor: Colors.black87,
-        resizeToAvoidBottomPadding: false,
 
         //Separated Widgets
         drawer: sidebar.Sidebar(),

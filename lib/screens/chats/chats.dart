@@ -9,8 +9,8 @@ class ChatScreen extends StatefulWidget {
 
 class _ChatScreenState extends State<ChatScreen>
     with SingleTickerProviderStateMixin {
-  ScrollController scrollcontroller;
-  TabController controller;
+  late ScrollController scrollcontroller;
+  late TabController controller;
 
   @override
   void initState() {
@@ -30,16 +30,16 @@ class _ChatScreenState extends State<ChatScreen>
   Widget build(BuildContext context) {
     return Scaffold(
         floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xFF28a366),
-        child: Icon(Icons.add),
-        foregroundColor: Colors.white,
-        onPressed: () {
-          if(controller.index != 0){
-            Navigator.of(context).pushNamed('/PublicChatRoom');
-          }else{
-          newchatdialog.openNewChatDialog(context);
-          }
-        }),
+            backgroundColor: Color(0xFF28a366),
+            child: Icon(Icons.add),
+            foregroundColor: Colors.white,
+            onPressed: () {
+              if (controller.index != 0) {
+                Navigator.of(context).pushNamed('/PublicChatRoom');
+              } else {
+                newchatdialog.openNewChatDialog(context);
+              }
+            }),
         body: NestedScrollView(
           controller: scrollcontroller,
           headerSliverBuilder: (BuildContext context, bool boxIsScrolled) {

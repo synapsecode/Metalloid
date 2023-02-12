@@ -4,7 +4,11 @@ class ImageItem {
   final String imageUrl;
   final String text;
   final Author author;
-  ImageItem({this.text, this.author, this.imageUrl});
+  ImageItem({
+    required this.text,
+    required this.author,
+    required this.imageUrl,
+  });
 }
 
 List<ImageItem> images = [

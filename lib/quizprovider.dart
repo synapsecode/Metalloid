@@ -1,9 +1,9 @@
 class Author {
   final String imageUrl;
   final String name;
-  Author({this.name, this.imageUrl});
+  Author({required this.name, required this.imageUrl});
 
-  void addAuthor({String name, String imageUrl}) {
+  void addAuthor({required String name, required String imageUrl}) {
     authors.add(Author(name: name, imageUrl: imageUrl));
   }
 }
@@ -24,7 +24,10 @@ class QuizItem {
   final String backgroundUrl;
   final Author author;
 
-  QuizItem({this.quizName, this.author, this.backgroundUrl});
+  QuizItem(
+      {required this.quizName,
+      required this.author,
+      required this.backgroundUrl});
 }
 
 List<QuizItem> quizzes = [

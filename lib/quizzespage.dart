@@ -44,7 +44,7 @@ class QuizCard extends StatelessWidget {
   final String text;
   final String imageUrl;
   final Author author;
-  QuizCard({this.text, this.author, this.imageUrl});
+  QuizCard({required this.text, required this.author, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -66,20 +66,18 @@ class QuizCard extends StatelessWidget {
                   child: new Stack(
                     children: <Widget>[
                       new Positioned(
-                        left: 0.0,
-                        top: 20.0,
-                        child: Row(
-                          children: <Widget>[
-                             CircleAvatar(
-                          radius: 18.0,
-                          backgroundImage: NetworkImage(author.imageUrl),
-                        ),
-                        SizedBox(width: 10.0),
-                        Text(author.name)
-                          ],
-                        )
-                       
-                      ),
+                          left: 0.0,
+                          top: 20.0,
+                          child: Row(
+                            children: <Widget>[
+                              CircleAvatar(
+                                radius: 18.0,
+                                backgroundImage: NetworkImage(author.imageUrl),
+                              ),
+                              SizedBox(width: 10.0),
+                              Text(author.name)
+                            ],
+                          )),
                       new Positioned(
                         left: 0.0,
                         bottom: 50.0,
@@ -137,8 +135,8 @@ class FeaturedQuizButton extends StatelessWidget {
         children: <Widget>[
           SizedBox(
             height: 90.0,
-            child: RaisedButton(
-              color: Colors.blueAccent,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -179,8 +177,8 @@ class LatestQuizzes extends StatelessWidget {
         children: <Widget>[
           SizedBox(
             height: 90.0,
-            child: RaisedButton(
-              color: Colors.red,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,

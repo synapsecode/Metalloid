@@ -21,7 +21,8 @@ List<String> title = [
   "Satanic Metal",
 ];
 
-void onChatRoomClick(double currentPage) {
+void onChatRoomClick(double? currentPage) {
+  if (currentPage == null) return;
   int i = currentPage.toInt();
   print("Clicked on Chatroom '${title[i]}'");
 }
@@ -35,7 +36,7 @@ var cardAspectRatio = 12.0 / 16.0;
 var widgetAspectRatio = cardAspectRatio * 1.2;
 
 class _CardUIState extends State<CardUI> {
-  var currentPage = images.length - 1.0;
+  double? currentPage = images.length - 1.0;
 
   @override
   Widget build(BuildContext context) {
@@ -87,8 +88,9 @@ class _CardUIState extends State<CardUI> {
                     controller: controller,
                     reverse: true,
                     itemBuilder: (context, index) {
-                      return FlatButton(
-                        color: Colors.transparent,
+                      return OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                              backgroundColor: Colors.red),
                           onPressed: () => onChatRoomClick(currentPage),
                           child: Container());
                     },
@@ -127,7 +129,7 @@ class CardScrollWidget extends StatelessWidget {
         var primaryCardLeft = safeWidth - widthOfPrimaryCard;
         var horizontalInset = primaryCardLeft / 2;
 
-        List<Widget> cardList = new List();
+        List<Widget> cardList = [];
 
         for (var i = 0; i < images.length; i++) {
           var delta = i - currentPage;

@@ -15,7 +15,7 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
-  TabController _controller;
+  late TabController _controller;
 
   @override
   void initState() {
@@ -106,21 +106,23 @@ class EditButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: 100.0,
-        child: RaisedButton(
-          onPressed: () => print("Pressed Edit"),
-          child: Row(
-            children: <Widget>[
-              Icon(Icons.edit),
-              SizedBox(width: 10.0),
-              Text("Edit")
-            ],
-          ),
-          color: Colors.black26,
-          shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(30.0),
-          ),
-        ));
+      width: 100.0,
+      child: ElevatedButton(
+        onPressed: () => print("Pressed Edit"),
+        child: Row(
+          children: <Widget>[
+            Icon(Icons.edit),
+            SizedBox(width: 10.0),
+            Text("Edit")
+          ],
+        ),
+        style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.black26,
+            shape: new RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(30.0),
+            )),
+      ),
+    );
   }
 }
 
@@ -174,7 +176,7 @@ class ProfileAppBody extends StatefulWidget {
 
 class _ProfileAppBodyState extends State<ProfileAppBody>
     with SingleTickerProviderStateMixin {
-  TabController _controller;
+  late TabController _controller;
 
   @override
   void initState() {
@@ -199,8 +201,6 @@ class _ProfileAppBodyState extends State<ProfileAppBody>
     ]);
   }
 }
-
-
 
 class BioCard extends StatelessWidget {
   @override

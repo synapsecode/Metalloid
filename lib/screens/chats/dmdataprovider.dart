@@ -4,7 +4,12 @@ class ChatModel {
   final String time;
   final String avatarUrl;
 
-  ChatModel({this.name, this.message, this.time, this.avatarUrl});
+  ChatModel({
+    required this.name,
+    required this.message,
+    required this.time,
+    required this.avatarUrl,
+  });
 
   void addChat(String name, String message, String time, String avatarUrl) {
     data.add(new ChatModel(
