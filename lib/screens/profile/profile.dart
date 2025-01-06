@@ -72,11 +72,14 @@ class ProfileTopBar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         CompletionBarWithProfileIcon(),
-        SizedBox(height: 10.0),
-        Text("Manas Hejmadi", style: TextStyle(fontSize: 25.0)),
-        SizedBox(height: 10.0),
-        Center(
-          child: new LevelIndicator(),
+        // SizedBox(height: 10.0),
+        Text("John Doe", style: TextStyle(fontSize: 25.0)),
+        // SizedBox(height: 10.0),
+        Padding(
+          padding: const EdgeInsets.only(left: 30.0),
+          child: Center(
+            child: new LevelIndicator(),
+          ),
         ),
         SizedBox(height: 10.0),
         EditButton(),
@@ -106,21 +109,23 @@ class EditButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100.0,
-      child: ElevatedButton(
-        onPressed: () => print("Pressed Edit"),
-        child: Row(
-          children: <Widget>[
-            Icon(Icons.edit),
-            SizedBox(width: 10.0),
-            Text("Edit")
-          ],
+      child: Center(
+        child: ElevatedButton(
+          onPressed: () => print("Pressed Edit"),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Icon(Icons.edit),
+              SizedBox(width: 10.0),
+              Text("Edit")
+            ],
+          ),
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.black26,
+              shape: new RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(30.0),
+              )),
         ),
-        style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.black26,
-            shape: new RoundedRectangleBorder(
-              borderRadius: new BorderRadius.circular(30.0),
-            )),
       ),
     );
   }
@@ -147,7 +152,7 @@ class CompletionBarWithProfileIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircularPercentIndicator(
-      radius: 120.0,
+      radius: 60.0,
       lineWidth: 10.0,
       percent: 0.8,
       center: ProfileIcon(),
@@ -220,7 +225,7 @@ class BioCard extends StatelessWidget {
                   children: <Widget>[
                     Text("Bio", style: TextStyle(fontSize: 20.0)),
                     SizedBox(width: 10.0),
-                    Text("Member Since April 2019",
+                    Text("Member Since November 2024",
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 10.0,
@@ -239,7 +244,7 @@ class BioCard extends StatelessWidget {
                   children: <Widget>[
                     Expanded(
                         child: Text(
-                            "I'm a 15 Year old School Student from India who is very passionate about Metal and Rock Music. The Genre of Metal really touches my soul! Metal music is not just entertainment it is a way of life! My favourite band is Slipknot!"))
+                            "Typically someone who listens to heavy metal music, often embracing its subcultures, fashion (like band t-shirts, leather jackets, and long hair), and values (such as individuality and rebellion)"))
                   ],
                 ),
                 SizedBox(height: 10.0),

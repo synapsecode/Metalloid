@@ -1,0 +1,1 @@
+ /Users/manashejmadi/Dev/FlutterStuff/Metalloid/.dart_tool/flutter_build/ed4158861b022654ad7e9ea0f47c99f1/native_assets.yaml: 

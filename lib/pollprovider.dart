@@ -14,7 +14,7 @@ List<Author> authors = [
   Author(name: "Alex Hefner", imageUrl: "https://picsum.photos/400/400/"),
   Author(name: "TheDarkLord", imageUrl: "https://picsum.photos/g/400/400/"),
   Author(name: "JoeyTheSlayer", imageUrl: "https://picsum.photos/g/200/200/"),
-  Author(name: "Manas Hejmadi", imageUrl: "https://picsum.photos/200/200/"),
+  Author(name: "John Doe", imageUrl: "https://picsum.photos/200/200/"),
 ];
 
 List<Author> getAuthors() {

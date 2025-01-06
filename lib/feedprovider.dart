@@ -30,7 +30,7 @@ List<ImageItem> images = [
       text: "Cannibal Corpse",
       author: authors[2],
       imageUrl:
-          "https://s3.amazonaws.com/quietus_production/images/articles/8231/CannibalCorpse_brick2_Main-Promo_byAlexMorgan_1331641840_crop_558x350.jpg"),
+          "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/186_photo.jpg"),
   ImageItem(
       text: "WhiteChapel",
       author: authors[0],
@@ -39,8 +39,7 @@ List<ImageItem> images = [
   ImageItem(
       text: "Linkin Park",
       author: authors[3],
-      imageUrl:
-          "https://tonedeaf.thebrag.com/wp-content/uploads/2020/02/undo-2020-02-17T114638.555-768x435.jpg"),
+      imageUrl: "https://images4.alphacoders.com/271/271088.jpg"),
 ];
 
 List<ImageItem> getImages() {

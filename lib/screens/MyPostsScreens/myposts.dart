@@ -61,8 +61,7 @@ class _MyPostViewState extends State<MyPostView> {
 class MyGeneralFeed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<ImageItem> currentUserImages =
-        ReturnSpecificUserImages("Manas Hejmadi");
+    List<ImageItem> currentUserImages = ReturnSpecificUserImages("John Doe");
     print("Current Image => $currentUserImages");
     return SingleChildScrollView(
         child: Column(
@@ -75,8 +74,7 @@ class MyGeneralFeed extends StatelessWidget {
 class MyQuizzes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<QuizItem> currentUserPolls =
-        ReturnSpecificUserQuizzes("Manas Hejmadi");
+    List<QuizItem> currentUserPolls = ReturnSpecificUserQuizzes("John Doe");
     print("Current Quiz => $currentUserPolls");
     return SingleChildScrollView(
         child: Column(
@@ -89,7 +87,7 @@ class MyQuizzes extends StatelessWidget {
 class MyPolls extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<PollItem> currentUserPolls = ReturnSpecificUserPolls("Manas Hejmadi");
+    List<PollItem> currentUserPolls = ReturnSpecificUserPolls("John Doe");
     print("Current Polls => $currentUserPolls");
     return SingleChildScrollView(
         child: Column(

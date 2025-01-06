@@ -12,7 +12,7 @@ List<Author> authors = [
   Author(name: "Alex Hefner", imageUrl: "https://picsum.photos/g/400/400/"),
   Author(name: "TheDarkLord", imageUrl: "https://picsum.photos/g/400/400/"),
   Author(name: "JoeyTheSlayer", imageUrl: "https://picsum.photos/g/200/200/"),
-  Author(name: "Manas Hejmadi", imageUrl: "https://picsum.photos/g/200/200/"),
+  Author(name: "John Doe", imageUrl: "https://picsum.photos/g/200/200/"),
 ];
 
 List<Author> getAuthors() {
@@ -35,7 +35,7 @@ List<QuizItem> quizzes = [
       quizName: "Test Your Metallica Knowledge",
       author: getAuthors()[3],
       backgroundUrl:
-          "https://www.morrisonhotelgallery.com/images/big/MHG-MTLCA-Band.jpg"),
+          "https://consequence.net/wp-content/uploads/2023/04/metallica-72-seasons-cover-story-interview.jpg"),
   QuizItem(
       quizName: "Corey Taylor Quiz",
       author: getAuthors()[0],
